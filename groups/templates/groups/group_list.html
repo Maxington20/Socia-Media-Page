@@ -5,10 +5,13 @@
       <div class="content">
           {% if user.is_authenticated %}
 
-            <h2>Welcome Back!</h2>
-            <a href="{% url 'posts:for_user' username=user.username %}">
-                @{{user.username}}
-            </a>
+            <h2>
+                Welcome Back!
+                <a href="{% url 'posts:for_user' username=user.username %}">
+                        @{{user.username}}
+                    </a>
+            </h2>
+          
             
           {% endif %}
             <h2>Groups</h2>
